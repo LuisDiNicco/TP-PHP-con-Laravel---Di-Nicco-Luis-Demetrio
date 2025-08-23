@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "dec723d7-3fe6-4619-b828-1fe321d42251",
+		"name": "Actividad Practica 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47822486",
+		"_collection_link": "https://luisdinicco1602-9919314.postman.co/workspace/Luis-Di-Nicco's-Workspace~a2f452a7-e19f-4857-8dc9-4c9f341df014/collection/47822486-dec723d7-3fe6-4619-b828-1fe321d42251?action=share&source=collection_link&creator=47822486"
+	},
+	"item": [
+		{
+			"name": "Punto 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json",
+					"protocol": "https",
+					"host": [
+						"reclutamiento-dev-procontacto-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"reclutier.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
