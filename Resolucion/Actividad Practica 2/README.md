@@ -2,13 +2,15 @@
 # Actividad Práctica 2 - ProContacto
 
 Este repositorio contiene la resolución de la **Actividad Práctica N°2** solicitada en el proceso de reclutamiento.  
-Incluye el proyecto de la API relaizado con Laravel y la parte **práctica** realizada con Postman.
+Incluye el proyecto de la API realizado con Laravel y la parte **práctica** realizada con Postman.
 
 ---
 
 ## Contenido
 
 `Actividad Practica 2 Luis Di Nicco.json` → archivo de colección de Postman en formato v2.1.
+
+
 `recluta-di-nicco-api` → Proyecto de la API en LARAVEL.
 
 ---
