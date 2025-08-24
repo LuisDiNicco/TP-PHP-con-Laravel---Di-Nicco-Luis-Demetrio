@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "ca9143f5-5759-4976-ae5e-01cfb16e5bd0",
+		"name": "Actividad Práctica 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47822486",
+		"_collection_link": "https://luisdinicco1602-9919314.postman.co/workspace/Luis-Di-Nicco's-Workspace~a2f452a7-e19f-4857-8dc9-4c9f341df014/collection/47822486-ca9143f5-5759-4976-ae5e-01cfb16e5bd0?action=share&source=collection_link&creator=47822486"
+	},
+	"item": [
+		{
+			"name": "Punto 1 - Get Reclutas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reclutier",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reclutier"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 1 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reclutier",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reclutier"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Aug 2025 18:14:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Lucas\",\n        \"suraname\": \"Segura\",\n        \"birthday\": \"16/11/1993\",\n        \"age\": 30,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 12345678\n    },\n    {\n        \"name\": \"Juan\",\n        \"suraname\": \"Perez\",\n        \"birthday\": \"16/09/1995\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Karen\",\n        \"suraname\": \"Bursa\",\n        \"birthday\": \"1996/09/18\",\n        \"age\": 28,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 39978556\n    },\n    {\n        \"name\": \"Zoe Abigail\",\n        \"suraname\": \"Perez\",\n        \"birthday\": \" 2003/02/27\",\n        \"age\": 21,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 45009507\n    },\n    {\n        \"name\": \"Mauro\",\n        \"suraname\": \"Corrales\",\n        \"birthday\": \"1997/01/05\",\n        \"age\": 27,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 40137650\n    },\n    {\n        \"name\": \"Ivone\",\n        \"suraname\": \"Corleto\",\n        \"birthday\": \"18/12/2001\",\n        \"age\": 22,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 43863355\n    },\n    {\n        \"name\": \"Ivone\",\n        \"suraname\": \"Corleto\",\n        \"birthday\": \"2001/12/18\",\n        \"age\": 22,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 43863355\n    },\n    {\n        \"name\": \"Brian\",\n        \"suraname\": \"Hidalgo\",\n        \"birthday\": \"2002/06/30\",\n        \"age\": 22,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 44318250\n    },\n    {\n        \"name\": \"Jimena\",\n        \"suraname\": \"Gomez Wusinowski\",\n        \"birthday\": \"2003/08/13\",\n        \"age\": 21,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 45070730\n    },\n    {\n        \"name\": \"Juan\",\n        \"suraname\": \"Perez\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Gabriel\",\n        \"suraname\": \"Enrriquez\",\n        \"birthday\": \"2000/07/18\",\n        \"age\": 24,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 42838208\n    },\n    {\n        \"name\": \"Gabriel\",\n        \"suraname\": \"Enrriquez\",\n        \"birthday\": \"1800/07/18\",\n        \"age\": \"25\",\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 42838208\n    },\n    {\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\",\n        \"birthday\": \"2003/02/27\",\n        \"age\": 21,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 45009507\n    },\n    {\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\",\n        \"birthday\": \"2003/02/27\",\n        \"age\": 21,\n        \"documentType\": \"ID\",\n        \"documentNumber\": 45009507\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Ariana\",\n        \"suraname\": \"Jara\",\n        \"birthday\": \"2000/10/10\",\n        \"age\": 24,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 27425919739\n    },\n    {\n        \"name\": \"Karen\",\n        \"suraname\": \"Bursa\",\n        \"birthday\": \"1996/09/18\",\n        \"age\": 28,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": \"39978556\"\n    },\n    {\n        \"name\": \"Matias\",\n        \"suraname\": \"Fernandes\",\n        \"birthday\": \"2002/08/16\",\n        \"age\": 22,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 43909868\n    },\n    {\n        \"name\": \"Karenbursa\",\n        \"suraname\": \"Bursa\",\n        \"birthday\": \"1996/09/18\",\n        \"age\": 28,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": \"27399785567\"\n    },\n    {\n        \"name\": \"Diego\",\n        \"suraname\": \"Becerra\",\n        \"birthday\": \"1994/07/07\",\n        \"age\": 30,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 38126935\n    },\n    {\n        \"name\": \"Diego Ezequiel\",\n        \"suraname\": \"Becerra\",\n        \"birthday\": \"1994/07/07\",\n        \"age\": 30,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 38126935\n    },\n    {\n        \"name\": \"Tatiana\",\n        \"suraname\": \"Mendez\",\n        \"birthday\": \"1999/07/20\",\n        \"age\": 25,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 27420998622\n    },\n    {\n        \"name\": \"Lucas\",\n        \"suraname\": \"Barreiro\",\n        \"birthday\": \"1997/05/22\",\n        \"age\": 27,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20403789152\n    },\n    {\n        \"name\": \"Lucas\",\n        \"suraname\": \"B\",\n        \"birthday\": \"1997-05-22\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20403789152\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"CUIL\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995-10-10\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/10/10\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Ramiro\",\n        \"suraname\": \"Fariello\",\n        \"birthday\": \"2004/08/17\",\n        \"age\": 20,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20461241094\n    },\n    {\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\",\n        \"birthday\": \"1999/03/12\",\n        \"age\": 25,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20422140671\n    },\n    {\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\",\n        \"birthday\": \"1999/12/03\",\n        \"age\": 25,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20422140671\n    },\n    {\n        \"name\": \"Facundo\",\n        \"suraname\": \"Cesti\",\n        \"birthday\": \"2003/02/05\",\n        \"age\": 22,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 23446701789\n    },\n    {\n        \"name\": \"Facundo\",\n        \"suraname\": \"Cesti\",\n        \"birthday\": \"2003/02/05\",\n        \"age\": 22,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 44670178\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 203456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": \"20123456781\"\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"ASD\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Prueba\",\n        \"suraname\": \"Prueba\",\n        \"birthday\": \"1995/11/16\",\n        \"age\": 29,\n        \"documentType\": \"ASD\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\",\n        \"birthday\": \"1999/12/03\",\n        \"age\": \"67\",\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\",\n        \"birthday\": \"1999/12/03\",\n        \"age\": \"25\",\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\",\n        \"birthday\": \"1999/12/03\",\n        \"age\": 25,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\",\n        \"birthday\": \"1999/12/03\",\n        \"age\": 18,\n        \"documentType\": \"CUIT\",\n        \"documentNumber\": 20123456781\n    },\n    {\n        \"name\": \"Rafael\",\n        \"suraname\": \"Ruiz\",\n        \"birthday\": \"2003/08/19\",\n        \"age\": 22,\n        \"documentType\": \"CUIL\",\n        \"documentNumber\": 20449604445\n    },\n    {\n        \"name\": \"Luis Demetrio\",\n        \"suraname\": \"Di Nicco\",\n        \"birthday\": \"2002/02/16\",\n        \"age\": 23,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 43664669\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Punto 2 - Crear Recluta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Luis Demetrio\",\r\n  \"suraname\":\"Di Nicco\",\r\n  \"birthday\":\"2002/02/16\",\r\n  \"documentType\":\"DNI\",\r\n  \"documentNumber\":43664669\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/recluta",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recluta"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 2 response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"Luis Demetrio\",\r\n  \"suraname\":\"Di Nicco\",\r\n  \"birthday\":\"2002/02/16\",\r\n  \"documentType\":\"DNI\",\r\n  \"documentNumber\":43664669\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/recluta",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recluta"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Aug 2025 18:20:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recluta creado y enviado a Firebase\",\n    \"saved\": {\n        \"name\": \"Luis Demetrio\",\n        \"suraname\": \"Di Nicco\",\n        \"birthday\": \"2002/02/16/\",\n        \"age\": 23,\n        \"documentType\": \"DNI\",\n        \"documentNumber\": 43664669\n    },\n    \"firebase\": {\n        \"name\": \"-OYSIsu2CM1-eVlWMGc4\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

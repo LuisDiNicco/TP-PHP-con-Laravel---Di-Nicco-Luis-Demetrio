@@ -1,61 +1,165 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mini-API de Reclutamiento en Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto corresponde a la **Actividad Práctica N°2**, donde desarrollé una mini-API en Laravel que consume y expone datos de reclutamiento de manera legible y permite registrar nuevos candidatos.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Descripción
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+La API tiene dos funcionalidades principales:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. **GET /reclutados**  
+   - Consume el recurso de Firebase:  
+     `https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json`  
+   - Normaliza y presenta los datos en formato legible (HTML con tabla simple).  
+   - Convierte `name` y `suraname` a **Title Case**.  
+   - Calcula la edad a partir de la fecha de nacimiento.  
+   - Filtra registros totalmente vacíos para que no aparezcan en la tabla. 
+   - Elimina Duplicados 
 
-## Learning Laravel
+2. **POST /recluta**  
+   - Permite enviar un nuevo candidato en formato JSON:  
+     ```json
+     {
+       "name":"TuNombre",
+       "suraname":"TuApellido",
+       "birthday":"1995/11/16",
+       "documentType":"CUIT",
+       "documentNumber":20123456781
+     }
+     ```
+   - Normaliza y mapea los datos a:  
+     ```json
+     {
+       "name":"TuNombre",
+       "suraname":"TuApellido",
+       "birthday":"1995/11/16/",
+       "age":29,
+       "documentType":"CUIT",
+       "documentNumber":20123456781
+     }
+     ```
+   - Valida:
+     - `name` y `suraname`: Title Case.  
+     - `birthday`: Formato `YYYY/MM/DD`, no posterior a hoy ni anterior a 1900/01/01. Agrega al final de la fecha otra '/'
+     - `documentType`: solo `CUIT` o `DNI`.  
+     - Calcula la edad automáticamente.  
+   - Envía el registro a Firebase:  
+     `https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json`  
+   - **Requiere cabecera `Accept: application/json`**, de lo contrario devuelve error 406.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Requisitos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP >= 8.1  
+- Laravel 10  
+- Composer  
+- Servidor con acceso a internet para consumir Firebase  
+- `.env` configurado con:  
+`FIREBASE_URL=https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com`
 
-## Laravel Sponsors
+## Instalación
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Clonar el repositorio:  
+ ```bash
+ git clone <tu-repo-url>
+ cd <tu-repo-folder>
+```
 
-### Premium Partners
+2. Instalar dependencias:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+`composer install`
 
-## Contributing
+3. Configurar el archivo .env (copiar de .env.example y actualizar FIREBASE_URL).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+4. Generar key de Laravel:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+`php artisan key:generate`
 
-## Security Vulnerabilities
+5. Ejecutar el servidor local:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+`php artisan serve`
 
-## License
+6. 6. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
+`http://127.0.0.1:8000`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+## Endpoints
+
+### GET /reclutados
+
+Devuelve un HTML con todos los candidatos de Firebase en una tabla.
+
+**Ejemplo de URL:**
+`http://127.0.0.1:8000/reclutados`
+
+---
+
+### POST /recluta
+
+Recibe un JSON con los datos del candidato, valida, normaliza y lo envía a Firebase.
+
+Requiere cabecera `Accept: application/json`.
+
+**Ejemplo en Postman** 
+
+1. URL y método:
+
+Método: POST
+
+URL: http://127.0.0.1:8000/api/recluta
+
+2. Headers:
+
+Key:Accept	Value: application/json
+
+Key:Content-Type	Value:application/json
+	
+3. Body:
+Seleccionar raw y JSON y colocar el siguiente contenido:
+```json
+{
+  "name": "Juan",
+  "suraname": "Pérez",
+  "birthday": "1990/05/12",
+  "documentType": "DNI",
+  "documentNumber": 12345678
+}
+```
+**Ejemplo de respuesta exitosa:**
+```json
+{
+  "name": "Juan",
+  "suraname": "Pérez",
+  "birthday": "1990/05/12/",
+  "age": 33,
+  "documentType": "DNI",
+  "documentNumber": 12345678
+}
+```
+**Si falta la cabecera Accept: application/json, devuelve:**
+```json
+{
+  "error": "Esta ruta requiere que la cabecera Accept sea application/json"
+}
+```
+con código HTTP 406 Not Acceptable.
+
+---
+### Reglas de negocio y validaciones
+- name / suraname: Convertir a Title Case.
+
+- birthday: YYYY/MM/DD, debe estar entre 1900/01/01 y hoy.
+
+- age: Calculada automáticamente a partir de birthday.
+
+- documentType: Solo CUIT o DNI.
+
+- Salida a Firebase: birthday siempre termina con una barra (.../).
+
+- Filtrado: Se eliminan filas completamente y los registros duplicados vacías antes de mostrar la tabla HTML.
+
+- Errores: Solicitudes inválidas al POST devuelven 400 Bad Request con mensaje de error.
+
