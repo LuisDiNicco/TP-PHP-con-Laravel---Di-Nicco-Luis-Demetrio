@@ -82,7 +82,7 @@ La API tiene dos funcionalidades principales:
 
 `php artisan serve`
 
-6. 6. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
+6. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
 `http://127.0.0.1:8000`
 
 ---
