@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "dec723d7-3fe6-4619-b828-1fe321d42251",
+		"name": "Actividad Practica 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47822486",
+		"_collection_link": "https://luisdinicco1602-9919314.postman.co/workspace/Luis-Di-Nicco's-Workspace~a2f452a7-e19f-4857-8dc9-4c9f341df014/collection/47822486-dec723d7-3fe6-4619-b828-1fe321d42251?action=share&source=collection_link&creator=47822486"
+	},
+	"item": [
+		{
+			"name": "Punto 1 - Get Reclutas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json",
+					"protocol": "https",
+					"host": [
+						"reclutamiento-dev-procontacto-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"reclutier.json"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 1 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json",
+							"protocol": "https",
+							"host": [
+								"reclutamiento-dev-procontacto-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"reclutier.json"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Aug 2025 12:34:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22442"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31556926; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"-OBbUVxgEqJYmwZOZlAd\": {\n        \"age\": 30,\n        \"birthday\": \"16/11/1993\",\n        \"documentNumber\": 12345678,\n        \"documentType\": \"Dni\",\n        \"name\": \"Lucas\",\n        \"suraname\": \"Segura\"\n    },\n    \"-OBbUZi4k40h_VGPOMg6\": {\n        \"age\": 29,\n        \"birthday\": \"16/09/1995\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Juan\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBbUc6GkeikiUMofPEE\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": 39978556,\n        \"documentType\": \"dni\",\n        \"name\": \"Karen\",\n        \"surname\": \"Bursa\"\n    },\n    \"-OBbUfgFq6NO4c-pNgX_\": {\n        \"age\": 21,\n        \"birthday\": \" 2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"Zoe Abigail\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBbUixCZXHS4HG1J4tE\": {\n        \"age\": 27,\n        \"birthday\": \"1997/01/05\",\n        \"documentNumber\": 40137650,\n        \"documentType\": \"DNI\",\n        \"name\": \"Mauro\",\n        \"surname\": \"Corrales\"\n    },\n    \"-OBbUlNT165geAS7dmtm\": {\n        \"age\": 22,\n        \"birthday\": \"18/12/2001/\",\n        \"documentNumber\": 43863355,\n        \"documentType\": \"DNI\",\n        \"name\": \"Ivone\",\n        \"suraname\": \"Corleto\"\n    },\n    \"-OBbaDK_MPrkwt9JL0cF\": {\n        \"age\": 22,\n        \"birthday\": \"2001/12/18\",\n        \"documentNumber\": 43863355,\n        \"documentType\": \"DNI\",\n        \"name\": \"Ivone\",\n        \"surname\": \"Corleto\"\n    },\n    \"-OBc1lfarf9LnRSnOXo4\": {\n        \"age\": 22,\n        \"birthday\": \"2002/06/30/\",\n        \"documentNumber\": 44318250,\n        \"documentType\": \"DNI\",\n        \"name\": \"Brian\",\n        \"suraname\": \"Hidalgo\"\n    },\n    \"-OBdTtd0Fc1DlBzk1WIT\": {\n        \"age\": 21,\n        \"birthday\": \"2003/08/13/\",\n        \"documentNumber\": 45070730,\n        \"documentType\": \"DNI\",\n        \"name\": \"Jimena\",\n        \"suraname\": \"Gomez Wusinowski\"\n    },\n    \"-OBdv1-DRmJIYIujDbvH\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Juan\",\n        \"surname\": \"Perez\"\n    },\n    \"-OBe1-Mf60m6th7NU3Ra\": {\n        \"age\": 21,\n        \"birthday\": \"2003/08/13\",\n        \"documentNumber\": 45070730,\n        \"documentType\": \"DNI\",\n        \"name\": \"Jimena\",\n        \"surname\": \"Gomez Wusinowski\"\n    },\n    \"-OBfJaHEdJdVO91Z684Q\": {\n        \"age\": 24,\n        \"birthday\": \"2000/07/18/\",\n        \"documentNumber\": 42838208,\n        \"documentType\": \"DNI\",\n        \"name\": \"Gabriel\",\n        \"suraname\": \"Enrriquez\"\n    },\n    \"-OBfd4APGUQtzGktBCuN\": {\n        \"age\": \"25\",\n        \"birthday\": \"1800/07/18/\",\n        \"documentNumber\": 42838208,\n        \"documentType\": \"DNI\",\n        \"name\": \"Gabriel\",\n        \"suraname\": \"Enrriquez\"\n    },\n    \"-OBfpUAMnpPOPOGyAksZ\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBfqrnZDNi82hJpSpzB\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBfsE7Rp-I79OPF_ATf\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBfstrAuKQkG5Vi1aga\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"Zoe\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OBfu_CY31duXIIHt9FA\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"zoe\",\n        \"suraname\": \"perez\"\n    },\n    \"-OBfvfVQ-7JNyzIzms_C\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"ID\",\n        \"name\": \"zoe\",\n        \"suraname\": \"perez\"\n    },\n    \"-OBg6sLcF3qDEFJufXFg\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"surname\": \"TuApellido\"\n    },\n    \"-OBg7GlXc-1Wyev0RszN\": {\n        \"age\": 22,\n        \"birthday\": \"2002/06/30\",\n        \"documentNumber\": 44318250,\n        \"documentType\": \"DNI\",\n        \"name\": \"Brian\",\n        \"surename\": \"Hidalgo\"\n    },\n    \"-OBiHRHwrm2hIlarQCnN\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBiHRI2TiTmDdivrFYN\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBiHRTgmnAJSZW5D5at\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBiIjyWq4Z_E9isapuv\": {\n        \"age\": 24,\n        \"birthday\": \"2000/10/10/\",\n        \"documentNumber\": 27425919739,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ariana\",\n        \"suraname\": \"Jara\"\n    },\n    \"-OBlpnFxltURcupZZdew\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": \"39978556\",\n        \"documentType\": \"DNI\",\n        \"name\": \"Karen\",\n        \"suraname\": \"Bursa\"\n    },\n    \"-OBlsrFPuc7RAGGMwsQZ\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": 39978556,\n        \"documentType\": \"dni\",\n        \"name\": \"Karen\",\n        \"surname\": \"Bursa\"\n    },\n    \"-OBlu0qvJMhd1A-zzYaO\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": \"39978556\",\n        \"documentType\": \"DNI\",\n        \"name\": \"Karen\",\n        \"suraname\": \"Bursa\"\n    },\n    \"-OBluugh3ZQVyJGHpNLt\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": 39978556,\n        \"documentType\": \"dni\",\n        \"name\": \"Karen\",\n        \"surname\": \"Bursa\"\n    },\n    \"-OBm2J0mmONVe-AZyqPv\": {\n        \"age\": 22,\n        \"birthday\": \"2002/08/16/\",\n        \"documentNumber\": 43909868,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Matias\",\n        \"suraname\": \"Fernandes\"\n    },\n    \"-OBmEDzA1PVpKEDjQjNo\": {\n        \"age\": 28,\n        \"birthday\": \"1996/09/18\",\n        \"documentNumber\": \"27399785567\",\n        \"documentType\": \"CUIT\",\n        \"name\": \"Karenbursa\",\n        \"suraname\": \"Bursa\"\n    },\n    \"-OBo2iNgpAWq66iF8IvB\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16/\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"suraname\": \"TuApellido\"\n    },\n    \"-OBo5DggPWDtPoYcVuKM\": {\n        \"age\": 24,\n        \"birthday\": \"2000/10/10\",\n        \"documentNumber\": 27425919739,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ariana\",\n        \"suraname\": \"Jara\"\n    },\n    \"-OBo5Dk5vcXr0Xh7hkzs\": {\n        \"age\": 24,\n        \"birthday\": \"2000/10/10\",\n        \"documentNumber\": 27425919739,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ariana\",\n        \"suraname\": \"Jara\"\n    },\n    \"-OBoWiBJRZSA2WCHbqMw\": {\n        \"age\": 30,\n        \"birthday\": \"1994/07/07\",\n        \"documentNumber\": 38126935,\n        \"documentType\": \"DNI\",\n        \"name\": \"Diego\",\n        \"suraname\": \"Becerra\"\n    },\n    \"-OBpG3z6Ghig66sOb1RE\": {\n        \"age\": 30,\n        \"birthday\": \"1994/07/07\",\n        \"documentNumber\": 38126935,\n        \"documentType\": \"DNI\",\n        \"name\": \"Diego Ezequiel\",\n        \"suraname\": \"Becerra\"\n    },\n    \"-OBvFgm7Ogm2Vq_RiR-9\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBvFgmAK7DJscjrwshu\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBvFgtJJafwoeRxVL4B\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OBvMLadGeIh5luXzGaf\": {\n        \"age\": 25,\n        \"birthday\": \"1999/07/20/\",\n        \"documentNumber\": 27420998622,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tatiana\",\n        \"suraname\": \"Mendez\"\n    },\n    \"-OBwoTmfBspQQ8yTc7mi\": {\n        \"age\": 27,\n        \"birthday\": \"1997/05/22/\",\n        \"documentNumber\": 20403789152,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Lucas\",\n        \"suraname\": \"Barreiro\"\n    },\n    \"-OC4jT00NyUr-iB44XfB\": {\n        \"age\": 29,\n        \"birthday\": \"1997-05-22\",\n        \"documentNumber\": 20403789152,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Lucas\",\n        \"suraname\": \"B\"\n    },\n    \"-OCJUFb128Tm-QFqkjqA\": {\n        \"age\": 29,\n        \"birthday\": \"16/09/1995\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Juan\",\n        \"suraname\": \"Perez\"\n    },\n    \"-OCJVOecCr4b5yq4c04n\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIL\",\n        \"name\": \"TuNombre\",\n        \"surname\": \"TuApellido\"\n    },\n    \"-OCJXXjveoMq7AVOD7ta\": {\n        \"age\": 29,\n        \"birthday\": \"1995-10-10\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"suraname\": \"TuApellido\"\n    },\n    \"-OCJZ5AMnJa2z67OX4vX\": {\n        \"age\": 29,\n        \"birthday\": \"1995/10/10\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"suraname\": \"TuApellido\"\n    },\n    \"-OCJZH3tNzxW8p-8h3eJ\": {\n        \"age\": 29,\n        \"birthday\": \"1995/10/10\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"suraname\": \"TuApellido\"\n    },\n    \"-OCJZQZvZx7M9wDkhPL3\": {\n        \"age\": 29,\n        \"birthday\": \"1995/10/10\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"TuNombre\",\n        \"suraname\": \"TuApellido\"\n    },\n    \"-OCdT1JCJNP0HlCbLxO-\": {\n        \"age\": 22,\n        \"birthday\": \"2002/06/30\",\n        \"documentNumber\": 44318250,\n        \"documentType\": \"DNI\",\n        \"name\": \"Brian\",\n        \"surename\": \"Hidalgo\"\n    },\n    \"-OOwV52iSOr1O4l3LiCh\": {\n        \"query\": \"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \"\n    },\n    \"-OOwVqPumDzlz7hrseXX\": {\n        \"age\": 20,\n        \"birthday\": \"2004/08/17/\",\n        \"documentNumber\": 20461241094,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ramiro\",\n        \"suraname\": \"Fariello\"\n    },\n    \"-OOwWS4Rdx-5BregHEr0\": {\n        \"age\": 20,\n        \"birthday\": \"2004/08/17/\",\n        \"documentNumber\": 20461241094,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ramiro\",\n        \"suraname\": \"Fariello\"\n    },\n    \"-OOwWcLgwDNNleVnxgVe\": {\n        \"age\": 20,\n        \"birthday\": \"2004/08/17/\",\n        \"documentNumber\": 20461241094,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ramiro\",\n        \"suraname\": \"Fariello\"\n    },\n    \"-OOwXNypaiRjty6blrvn\": {\n        \"age\": 20,\n        \"birthday\": \"2004/08/17/\",\n        \"documentNumber\": 20461241094,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Ramiro\",\n        \"suraname\": \"Fariello\"\n    },\n    \"-ORCpHzoKsKg7qL0nl6Q\": {\n        \"age\": 25,\n        \"birthday\": \"1999/03/12\",\n        \"documentNumber\": 20422140671,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\"\n    },\n    \"-ORCpd2lnl9HCQWFFx0H\": {\n        \"age\": 25,\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20422140671,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\"\n    },\n    \"-ORCwz1Sz5ZMcaZviytf\": {\n        \"age\": 22,\n        \"birthday\": \"2003/02/05\",\n        \"documentNumber\": 23446701789,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Facundo\",\n        \"suraname\": \"Cesti\"\n    },\n    \"-ORD95CVexhgKbtQaPgM\": {\n        \"age\": 25,\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20422140671,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\"\n    },\n    \"-ORD9VoXecMpuS-uP7XW\": {\n        \"age\": 25,\n        \"birthday\": \"1999/03/12\",\n        \"documentNumber\": 20422140671,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Antonio\",\n        \"suraname\": \"Solis\"\n    },\n    \"-ORMiVdNDbDKkz6Hs2b2\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27/\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"zoe\",\n        \"suraname\": \"perez\"\n    },\n    \"-ORMjJ9yxSTCpJ4YDoft\": {\n        \"age\": 21,\n        \"birthday\": \"2003/02/27/\",\n        \"documentNumber\": 45009507,\n        \"documentType\": \"DNI\",\n        \"name\": \"zoe\",\n        \"suraname\": \"perez\"\n    },\n    \"-ORMjYTvWhG3LAfrCyzx\": {\n        \"age\": 22,\n        \"birthday\": \"2003/02/05/\",\n        \"documentNumber\": 44670178,\n        \"documentType\": \"DNI\",\n        \"name\": \"facundo\",\n        \"suraname\": \"cesti\"\n    },\n    \"-ORSJz8_WsgDx8ThDWdV\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16/\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORSK0EuS8LDYgHms6Um\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORSK380iClOtXjGlio3\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 203456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORSK4RMoupiTn6EqFUf\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": \"20123456781\",\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORSK9__s0YaMp6VsPn4\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"asd\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORSKT75wjDMV8dYP78A\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"asd\",\n        \"name\": \"Prueba\",\n        \"suraname\": \"Prueba\"\n    },\n    \"-ORw53iwsgWx_PkKrqzf\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"asd\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORw5g1AVWYqmQUi1R97\": {\n        \"age\": 29,\n        \"birthday\": \"1995/11/16\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Tuapellido\"\n    },\n    \"-ORw6zo4WYS8kwVdPAx2\": {\n        \"age\": \"67\",\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\"\n    },\n    \"-ORw74BZMgr4p5fGWat1\": {\n        \"age\": \"25\",\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\"\n    },\n    \"-ORwAQnJ4Bvl5viLxOcU\": {\n        \"age\": 25,\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\"\n    },\n    \"-ORwAdTy0SskZ7DqkYq6\": {\n        \"age\": 18,\n        \"birthday\": \"1999/12/03\",\n        \"documentNumber\": 20123456781,\n        \"documentType\": \"CUIT\",\n        \"name\": \"Tunombre\",\n        \"suraname\": \"Apellido\"\n    },\n    \"-OYNvo5VOXvnqu_npv3b\": {\n        \"age\": 22,\n        \"birthday\": \"2003/08/19\",\n        \"documentNumber\": 20449604445,\n        \"documentType\": \"CUIL\",\n        \"name\": \"Rafael\",\n        \"suraname\": \"Ruiz\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Punto 2 - Crear Recluta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Luis Demetrio\",\r\n    \"suraname\":\"Di Nicco\",\r\n    \"birthday\":\"2002/02/16\",\r\n    \"age\":23,\r\n    \"documentType\":\"DNI\",\r\n    \"documentNumber\":43664669\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json",
+					"protocol": "https",
+					"host": [
+						"reclutamiento-dev-procontacto-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"reclutier.json"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 2 response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Luis Demetrio\",\r\n    \"suraname\":\"Di Nicco\",\r\n    \"birthday\":\"2002/02/16\",\r\n    \"age\":23,\r\n    \"documentType\":\"DNI\",\r\n    \"documentNumber\":43664669\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com/reclutier.json",
+							"protocol": "https",
+							"host": [
+								"reclutamiento-dev-procontacto-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"reclutier.json"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Aug 2025 12:51:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31556926; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"-OYR7Vw4ezjzNFIKeWod\"\n}"
+				}
+			]
+		}
+	]
+}
