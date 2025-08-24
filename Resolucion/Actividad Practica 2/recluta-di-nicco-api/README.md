@@ -92,6 +92,10 @@ php artisan serve
 7. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
 `http://127.0.0.1:8000`
 
+**Esta es la pantalla que verá al abrir la API**
+
+![Pantalla de bienvenida](https://raw.githubusercontent.com/LuisDiNicco/TP-PHP-con-Laravel---Di-Nicco-Luis-Demetrio/refs/heads/feature/agrego-imagenes/Resolucion/Actividad%20Practica%202/imagenes/Pagina-Bienvenida.png)
+
 ---
 ## Endpoints
 
@@ -101,6 +105,10 @@ Devuelve un HTML con todos los candidatos de Firebase en una tabla.
 
 **Ejemplo de URL:**
 `http://127.0.0.1:8000/reclutados`
+
+**Esta es la pantalla que verá al presionar el boton "Ver Reclutados" o buscar la url: http://127.0.0.1:8000/reclutados**
+![Pantalla de reclutados](https://raw.githubusercontent.com/LuisDiNicco/TP-PHP-con-Laravel---Di-Nicco-Luis-Demetrio/refs/heads/feature/agrego-imagenes/Resolucion/Actividad%20Practica%202/imagenes/Pagina-Reclutados.png)
+
 
 ---
 
