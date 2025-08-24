@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Carbon\Carbon;
@@ -25,24 +26,29 @@ class ReclutaController extends Controller
 
         $data = $resp->json(); // puede ser null o un objeto {id: registro, ...}
 
-        // Normalizamos a una lista legible
+        // Normalizamos y eliminamos duplicados
         $rows = collect($data ?? [])->map(function ($item) {
-            // Unificar apellidos mal tipeados de la base pública (por si existieran)
             $last = $item['suraname'] ?? $item['surname'] ?? $item['surename'] ?? '';
-
             $name = $item['name'] ?? '';
             $birthday = isset($item['birthday']) ? rtrim($item['birthday'], '/') : null;
-            $age = $item['age'] ?? ( $birthday ? $this->calcAgeFromYmd($birthday) : null );
+            $age = $item['age'] ?? ($birthday ? $this->calcAgeFromYmd($birthday) : null);
 
             return [
                 'name'           => $this->toTitle($name),
                 'suraname'       => $this->toTitle($last),
-                'birthday'       => $birthday, // sin la barra final para leer
+                'birthday'       => $birthday,
                 'age'            => $age,
                 'documentType'   => isset($item['documentType']) ? strtoupper($item['documentType']) : null,
                 'documentNumber' => $item['documentNumber'] ?? null,
             ];
-        })->values();
+        })->filter(function ($row) {
+            // Elimina registros donde todo está vacío o null
+            return collect($row)->filter(fn($v) => !is_null($v) && $v !== '')->isNotEmpty();
+        })
+        ->unique(function ($item) {
+            return md5(json_encode($item));
+        })
+        ->values();
 
         return response()->json($rows);
     }
@@ -58,7 +64,7 @@ class ReclutaController extends Controller
             $last = $item['suraname'] ?? $item['surname'] ?? $item['surename'] ?? '';
             $name = $item['name'] ?? '';
             $birthday = isset($item['birthday']) ? rtrim($item['birthday'], '/') : null;
-            $age = $item['age'] ?? ( $birthday ? $this->calcAgeFromYmd($birthday) : null );
+            $age = $item['age'] ?? ($birthday ? $this->calcAgeFromYmd($birthday) : null);
 
             return [
                 'name'           => $this->toTitle($name),
@@ -68,19 +74,32 @@ class ReclutaController extends Controller
                 'documentType'   => isset($item['documentType']) ? strtoupper($item['documentType']) : null,
                 'documentNumber' => $item['documentNumber'] ?? null,
             ];
-        })->values();
+        })->filter(function ($row) {
+            // Elimina registros donde todo está vacío o null
+            return collect($row)->filter(fn($v) => !is_null($v) && $v !== '')->isNotEmpty();
+        })
+        ->unique(function ($item) {
+            return md5(json_encode($item));
+        })
+        ->values();
 
-        // Pasamos $rows a la vista
         return view('reclutados', ['rows' => $rows]);
     }
 
     // POST /api/recluta → valida, normaliza, arma payload y POSTea a Firebase
     public function store(Request $request)
     {
-        // Forzar que Laravel trate este request como API
+        //Forzar que Laravel trate este request como API
+        //if (!$request->expectsJson()) {
+           // $request->headers->set('Accept', 'application/json');
+        //}
+
+        // Rechazo peticiones que no contengan la cabezera accept
         if (!$request->expectsJson()) {
-            $request->headers->set('Accept', 'application/json');
-    }
+            return response()->json([
+                'error' => 'Esta ruta requiere que la cabecera Accept sea application/json'
+            ], 406); // 406 Not Acceptable
+        }
         
         // Normalizamos de entrada (por si llega "dni" o "cuit")
         $request->merge([
@@ -88,12 +107,12 @@ class ReclutaController extends Controller
         ]);
 
         // Validaciones de negocio
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'min:1', 'max:100'],
-            'suraname' => ['required', 'string', 'min:1', 'max:100'],
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'min:1', 'max:100', 'regex:/^[\p{L}\s\'\-]+$/u'],
+            'suraname' => ['required', 'string', 'min:1', 'max:100', 'regex:/^[\p{L}\s\'\-]+$/u'],
             'birthday' => ['required', 'date_format:Y/m/d', 'after_or_equal:1900/01/01', 'before_or_equal:today'],
             'documentType' => ['required', 'string', Rule::in(['CUIT', 'DNI'])],
-            'documentNumber' => ['required', 'regex:/^\d{7,11}$/'], // ajustá si querés otra longitud
+            'documentNumber' => ['required', 'regex:/^\d{7,11}$/'],
         ], [
             'birthday.date_format' => 'El birthday debe tener formato YYYY/MM/DD.',
             'birthday.after_or_equal' => 'El birthday no puede ser anterior a 1900/01/01.',
@@ -101,6 +120,15 @@ class ReclutaController extends Controller
             'documentType.in' => 'documentType debe ser CUIT o DNI.',
             'documentNumber.regex' => 'documentNumber debe contener solo dígitos (7 a 11).',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Error de validación',
+                'errors' => $validator->errors(),
+            ], 400);
+        }
+
+        $validated = $validator->validated();
 
         // Normalización requerida
         $name = $this->toTitle($validated['name']);
@@ -143,6 +171,7 @@ class ReclutaController extends Controller
     private function toTitle(?string $value): ?string
     {
         if ($value === null) return null;
+        $value = preg_replace('/\s+/', ' ', trim($value)); // elimina espacios extra
         return Str::of($value)->lower()->title(); // Title Case
     }
 
@@ -151,6 +180,6 @@ class ReclutaController extends Controller
         // Acepta "YYYY/MM/DD"
         $clean = rtrim($ymd, '/');
         $dt = Carbon::createFromFormat('Y/m/d', $clean);
-        return $dt->age;
+        return $dt->diffInYears(now());;
     }
 }
