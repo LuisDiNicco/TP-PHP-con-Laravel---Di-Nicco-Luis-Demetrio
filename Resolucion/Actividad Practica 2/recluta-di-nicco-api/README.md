@@ -66,23 +66,30 @@ La API tiene dos funcionalidades principales:
  git clone <tu-repo-url>
  cd <tu-repo-folder>
 ```
+2. Abrir el proyecto en un IDE
+Abra la carpeta del proyecto en Visual Studio Code o en el IDE de su preferencia. Esto facilita editar archivos como `.env` y trabajar con el código.
 
-2. Instalar dependencias:
+3. Instalar dependencias:
+ ```bash
+composer install
+ ```
 
-`composer install`
+4. Configurar el archivo .env (copiar de .env.example y actualizar FIREBASE_URL).
+ ```bash
+FIREBASE_URL=https://reclutamiento-dev-procontacto-default-rtdb.firebaseio.com
+ ```
 
-3. Configurar el archivo .env (copiar de .env.example y actualizar FIREBASE_URL).
+5. Generar key de Laravel:
+ ```bash
+php artisan key:generate
+ ```
 
+6. Ejecutar el servidor local:
+ ```bash
+php artisan serve
+ ```
 
-4. Generar key de Laravel:
-
-`php artisan key:generate`
-
-5. Ejecutar el servidor local:
-
-`php artisan serve`
-
-6. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
+7. Abra un navegador web e ingrese la siguiente URL para acceder a la API. Se mostrará la pantalla de bienvenida:
 `http://127.0.0.1:8000`
 
 ---
